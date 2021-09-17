@@ -1,0 +1,14 @@
+{
+    "short_name": "Nategh",
+    "name": "Nategh",
+    "description": "Quran Nategh",
+    "icons": [
+        {
+            "src":"/image/nategh.png",
+            "sizes": "800x800",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "./",
+    "display": "standalone"
+}
