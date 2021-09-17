@@ -1,0 +1,75 @@
+<style>
+	main div#header {
+    	justify-content: center;
+    	align-content: flex-end;
+    	align-items: flex-end;
+    	width: 90%;
+    	height: calc(15% + 6rem);
+    	padding: 0 5%;
+    	background: var(--headerColor);
+    	line-height: 6rem;
+    	box-shadow: 0 0 1rem #00000060;
+	}
+	@media all and (display-mode: standalone) {
+		main div#header {
+        	padding: 0.5rem 5%;
+    	}
+	}
+	@media screen and (max-height: 550px) {
+    	main div#header {
+    		position: initial;
+        	height: 6rem;
+    	}
+	}
+	main div#header div:hover {
+		cursor: pointer;
+	}
+	main div#header div svg {
+    	width: 6rem;
+    	height: 6rem;
+	}
+	main div#header div svg line {
+		stroke: var(--onHeaderColor);
+	}
+	main div#header div h1 {
+		margin: 1rem 0 0;
+    	line-height: 5rem;
+    	color: var(--onHeaderColor);
+	}
+	main div#content {
+    	width: 100%;
+    	max-width: 30rem;
+    	padding: 0.5rem;
+    	margin: 0.3rem auto 0;
+	}
+</style>
+
+<div id="header">
+    <div onclick="load('intro', 'landing')">
+		<svg>
+			<line x1="10%" y1="50%" x2="80%" y2="80%" stroke-width="4%"></line>
+			<line x1="90%" y1="50%" x2="20%" y2="80%" stroke-width="4%"></line>
+			<line x1="15%" y1="48%" x2="50%" y2="65%" stroke-width="5%"></line>
+			<line x1="85%" y1="48%" x2="50%" y2="65%" stroke-width="5%"></line>
+			<line x1="17%" y1="52%" x2="30%" y2="20%" stroke-width="4%"></line>
+			<line x1="83%" y1="52%" x2="70%" y2="20%" stroke-width="4%"></line>
+			<line x1="15%" y1="52%" x2="30%" y2="20%" stroke-width="4%"></line>
+			<line x1="85%" y1="52%" x2="70%" y2="20%" stroke-width="4%"></line>
+			<line x1="50%" y1="30%" x2="30%" y2="21%" stroke-width="2%"></line>
+			<line x1="50%" y1="30%" x2="70%" y2="21%" stroke-width="2%"></line>
+			<line x1="50%" y1="30%" x2="50%" y2="67%" stroke-width="1%"></line>
+        </svg>
+        <h1>Nategh</h1>
+    </div>
+</div>
+<div id="content">
+    <form>
+		<p>Wellcome, Register your account.</p>
+		<input type="email" name="email" placeholder="Email" required disabled><label>Email</label>
+		<input type="text" name="username" placeholder="Public username" minlength="4" maxlength="16" required autofocus><label>Public username</label>
+		<input type="text" name="name" placeholder="Public name" minlength="1" maxlength="16" required><label>Public name</label>
+        <input type="submit" value="Register">
+    </form>
+    <hr>
+    <a style="margin-inline-start:auto" onclick="nwaPageFetch(false, 'intro', 'landing')">Cancel</a>
+</div>

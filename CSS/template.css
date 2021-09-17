@@ -1,0 +1,86 @@
+@font-face {
+	font-family: 'hafs';
+	src: url('https://cdn.cleveraj.net/fonts/hafs.eot');
+	src: url('https://cdn.cleveraj.net/fonts/hafs.woff') format('woff'),
+		 url('https://cdn.cleveraj.net/fonts/hafs.otf') format('opentype');
+}
+
+body aside > ul {
+    padding: 1rem 0;
+}
+body aside > ul li {
+    width: 100%;
+}
+body aside > ul > li > div {
+	align-items: center;
+    width: calc(100% - 2rem);
+    padding: 0 1rem;
+}
+@media (pointer: fine) {
+    body aside > ul > li:hover > div {
+        background: #7d7d7d25;
+        cursor: pointer;
+    }
+}
+body aside > ul > li.active > div {
+    background: #7d7d7d30;
+}
+body aside > ul > li > div > span {
+	font-size: 1.3rem;
+	opacity: 0.7;
+}
+body aside > ul > li > ul {
+    width: calc(100% - 1rem);
+    padding: 0 0.5rem 0 1rem;
+    max-height: 0;
+    transition: max-height 0.8s;
+    overflow: hidden;
+    box-shadow: inset 0 -1px 0 #7d7d7d40;
+}
+body aside > ul > li.active > ul {
+    max-height: 1000px;
+}
+body aside > ul > li > ul label {
+    width: calc(35% - 0.2rem);
+    margin: 0.5rem 0;
+}
+body aside > ul > li > ul select {
+    width: calc(65% - 1.6rem);
+    margin: 0.5rem 0;
+}
+
+
+body.audioPlay footer button#audioPlay {display: none;}
+body footer button#audioPouse {display: none;}
+body.audioPlay footer button#audioPouse {display: block;}
+
+
+body footer div {
+	direction: ltr;
+}
+body footer input[type="range"] {
+	width: calc(80% - 25rem - 10rem);
+}
+input[type="range"]::-webkit-slider-thumb {
+	background: var(--backgroundColor);
+	border: 0.1rem solid #7d7d7d7d;
+}
+@media screen and (max-width: 800px) {
+	body footer input[type="range"] {
+		display: none;
+	}
+}
+
+body nav ul#navProfile img {
+	width: 3.2rem;
+    height: 3.2rem;
+    margin: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.4rem #7d7d7d40;
+    background: #FFF;
+}
+body nav ul#navProfile a {
+	line-height: 3.2rem;
+	margin: 2rem;
+	margin-inline-start: 0;
+}

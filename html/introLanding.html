@@ -1,0 +1,142 @@
+<style>
+	html body main {
+		line-height: 2.4rem;
+	}
+	html body main div#header {
+    	position: sticky;
+    	top: 0;
+    	display: flex;
+    	width: 90%;
+    	height: 5rem;
+    	padding: 0 5%;
+    	line-height: 5rem;
+    	background: var(--headerColor);
+    	box-shadow: 0 0 1rem #00000060;
+    	text-align: justify;
+	}
+	html body main div#header svg {
+    	width: 5rem;
+    	height: 5rem;
+	}
+	html body main div#header svg circle {
+    	fill: var(--onHeaderColor);
+	}
+	html body main div#header h1 {
+		line-height: 5rem;
+    	color: var(--onHeaderColor);
+	}
+	html body main div#header form {
+    	width: auto;
+    	height: 100%;
+    	margin: 0;
+    	margin-inline-start: auto;
+	}
+	html body main div#header form select {
+    	width: auto;
+    	height: 3.2rem;
+    	margin: 0.9rem 0;
+    	border: 0;
+    	background: none;
+    	box-shadow: none;
+    	color: var(--onHeaderColor);
+	}
+	html body main div#content {
+    	display: flex;
+    	flex-wrap: nowrap;
+    	flex-direction: column;
+    	justify-content: center;
+    	align-content: center;
+    	align-items: center;
+    	width: 90%;
+    	min-height: calc(100% - 5rem);
+    	padding: 0 5%;
+	}
+	html body main div#content h1 {
+		margin: 0.5rem auto;
+		line-height: 7rem;
+		font-family: hafs;
+		font-size: 5rem;
+		font-weight: 700;
+	}
+	html body main div#content svg {
+		width: 15rem;
+		height: 15rem;
+	}
+	@media screen and (max-width: 350px) {
+		html body main div#content svg {
+			width: 12rem;
+			height: 12rem;
+		}
+	}
+	@media screen and (max-height: 400px) {
+		html body main div#content svg {
+			display: none;
+		}
+	}
+	html body main div#content p {
+    	max-width: 50rem;
+    	margin: 1rem;
+    	text-align: justify;
+	}
+	@media all and (display-mode: standalone) {
+    	html body main div#content p {
+        	display: none;
+    	}
+	}
+	html body main div#content button {
+		height: 6rem;
+    	line-height: 6rem;
+    	padding: 0 2rem;
+    	margin: 2rem 0;
+    	font-size: 1.8rem;
+    	color: #e8e8e8;
+    	border: none;
+    	border-radius: 3.5rem;
+    	background: linear-gradient(45deg,var(--primaryVariantColor),var(--primaryColor),var(--primaryVariantColor));
+    	background-size: 400% 400%;
+    	cursor: pointer;
+    	box-shadow: 0 0 1rem #00000090;
+    	text-shadow: 0.1rem 0.1rem 0.2rem black;
+	}
+	html body main div#content button:hover {
+		text-shadow: 0.1rem 0.1rem 0.5rem black;
+		box-shadow: inset 0 0 10rem #7d7d7d10;
+	}
+	html body main div#content h1 {
+		color: var(--primaryColor);
+	}
+</style>
+
+<div id="header">
+    <h1>Nategh</h1>
+    <form>
+        <select name="languageSelector" onchange="languageSelectorOnChange('.sign .footer');">
+            <option value="en">English</option>
+            <option value="fr">فارسی</option>
+        </select>
+    </form>
+</div>
+<div id="content">
+	<svg>
+		<line x1="10%" y1="50%" x2="80%" y2="80%" stroke-width="4%"></line>
+		<line x1="90%" y1="50%" x2="20%" y2="80%" stroke-width="4%"></line>
+		<line x1="15%" y1="48%" x2="50%" y2="65%" stroke-width="5%"></line>
+		<line x1="85%" y1="48%" x2="50%" y2="65%" stroke-width="5%"></line>
+		<line x1="17%" y1="52%" x2="30%" y2="20%" stroke-width="4%"></line>
+		<line x1="83%" y1="52%" x2="70%" y2="20%" stroke-width="4%"></line>
+		<line x1="15%" y1="52%" x2="30%" y2="20%" stroke-width="4%"></line>
+		<line x1="85%" y1="52%" x2="70%" y2="20%" stroke-width="4%"></line>
+		<line x1="50%" y1="30%" x2="30%" y2="21%" stroke-width="2%"></line>
+		<line x1="50%" y1="30%" x2="70%" y2="21%" stroke-width="2%"></line>
+		<line x1="50%" y1="30%" x2="50%" y2="67%" stroke-width="1%"></line>
+	</svg>
+    <h1>الْقُرآنُ النّاطِق</h1>
+    <p>
+        <span>Quran Nategh, Recitation, Word by Word, Translate & Tafsir. Based on research.</span>
+        <a onclick="alert('Add page to homescreen from browser options.')">Install PWA application</a>
+        <span>on any platform.</span>
+        <span>Our <a>source code</a> is open.</span>
+    </p>
+    <span><a target="blank" href="https://nategh.info">Privacy policy</a> . <a target="blank" href="https://nategh.info">Learn more</a></span>
+    <button onclick="nwaPageFetch(false, 'quran', 'landing')">Get start now!</button>
+</div>

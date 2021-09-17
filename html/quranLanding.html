@@ -1,0 +1,185 @@
+<style>
+	main article.container {
+		max-width: 80rem;
+		padding: 2rem;
+		border-radius: 1rem;
+		background: #7d7d7d2e;
+	}
+</style>
+
+<article class="container">
+</article>
+
+<aside>
+	<ul>
+		<li id="quran">
+			<div onclick="activeNavTab('quran');">
+				<h2 nwaTrans="quran"></h2>
+				<span>42:118</span>
+			</div>
+			<ul>
+				<li>
+					<label>Surah:</label>
+					<select name="surah">
+						<option value="1" selected>1 - Al-Fatihah</option>
+						<option value="2">2 - Al-Baqarah</option>
+						<option value="3">3 - </option>
+						<option value="4">4 - </option>
+					</select>
+				</li>
+				<li>
+					<label>Verse:</label>
+					<select name="verse">
+						<option value="1" selected>1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+					</select>
+				</li>
+				<li>
+					<label>Juz:</label>
+					<select name="">
+						<option value="1" selected>1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+					</select>
+				</li>
+				<li>
+					<label>Page:</label>
+					<select name="">
+						<option value="1" selected>1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+					</select>
+				</li>
+			</ul>
+		</li>
+		<li id="recitation">
+			<div onclick="activeNavTab('recitation');">
+				<h2 nwaTrans="recitation"></h2>
+			</div>
+			<ul>
+				<li>
+					<label>Ghari:</label>
+					<select name="">
+						<option value="1">Al-Afasy</option>
+					</select>
+				</li>
+				<li>
+					<label>Play:</label>
+					<select name="">
+						<option value="1">Countinues</option>
+					</select>
+				</li>
+				<li>
+					<label>Delay:</label>
+					<select name="">
+						<option value="1">1 sec</option>
+					</select>
+				</li>
+				<li>
+					<label>Repeat:</label>
+					<select name="">
+						<option value="1">1 time</option>
+					</select>
+				</li>
+			</ul>
+		</li>
+		<li id="arabicText">
+			<div onclick="activeNavTab('arabicText');">
+				<h2 nwaTrans="arabicText"></h2>
+			</div>
+			<ul>
+				<li>
+					<label>Show:</label>
+					<input type="checkbox" name="showArabic">
+				</li>
+				<li>
+					<label>Tajweed:</label>
+					<input type="checkbox" name="showTajweed">
+				</li>
+				<li>
+					<label>Font:</label>
+					<select name="">
+						<option value="">Hafs</option>
+					</select>
+				</li>
+				<li>
+					<label>Text:</label>
+					<select name="">
+						<option value="">Uthmani</option>
+					</select>
+				</li>
+			</ul>
+		</li>
+		<li id="byWord">
+			<div onclick="activeNavTab('byWord');">
+				<h2 nwaTrans="byWord"></h2>
+			</div>
+			<ul>
+				<li>
+					<label>Show:</label>
+					<input type="checkbox" name="showByWord">
+				</li>
+				<li>
+					<label>Language:</label>
+					<select name="">
+						<option value="">Arabic</option>
+						<option value="">English</option>
+						<option value="" selected>Persian</option>
+						<option value="">Turkish</option>
+					</select>
+				</li>
+			</ul>
+		</li>
+		<li id="translation">
+			<div onclick="activeNavTab('translation');">
+				<h2 nwaTrans="translation"></h2>
+			</div>
+			<ul>
+				<li>
+					<label>Show:</label>
+					<input type="checkbox" name="">
+				</li>
+				<li>
+					<label>Play:</label>
+					<input type="checkbox" name="playTranslation">
+				</li>
+			</ul>
+		</li>
+		<li id="tafsir">
+			<div onclick="activeNavTab('tafsir');">
+				<h2 nwaTrans="tafsir"></h2>
+			</div>
+			<ul>
+				<li>
+					<label>Show:</label>
+					<input type="checkbox" name="">
+				</li>
+			</ul>
+		</li>
+	</ul>
+</aside>

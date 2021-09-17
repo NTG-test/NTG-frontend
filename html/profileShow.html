@@ -1,0 +1,51 @@
+<style>
+	main img {
+		width: 3.2rem;
+		height: 3.2rem;
+		margin: 1rem;
+		border-radius: 50%;
+		box-shadow: 0 0 0 0.4rem #7d7d7d40;
+		background: #FFF;
+	}
+	main section#profile {
+		align-items: center;
+	}
+	main section#profile div {
+		margin-inline-end: auto;
+	}
+	main section#profile div span#username {
+		width: 100%;
+		margin: 1rem 1rem 0;
+		line-height: 1.7rem;
+		font-weight: bold;
+	}
+	main section#profile div span#name {
+		width: 100%;
+		margin: 0 1rem 1rem;
+		line-height: 1.5rem;
+	}
+	main section#profile button {
+		margin: 1rem;
+	}
+</style>
+
+<article class="container">
+	<h2>User profile</h2>
+	<button onclick="nwaPageFetch(true, 'profile', 'delete');">Delete profile</button>
+	<button>Log out</button>
+	<hr>
+	<section id="profile">
+		<img src="/image/defaultProfilePhoto.png">
+		<div>
+			<span id="username"></span>
+			<span id="name"></span>
+		</div>
+		<button onclick="nwaPageFetch(true, 'profile', 'edit');">Edit profile</button>
+	</section>
+	<label>Registered users have no benefit, Yet.</label>
+</article>
+<article class="container">
+	<h2>Help us Grow</h2>
+	<hr>
+	<p>Report a bug, Modify a translation, Answer my questions and More about Nategh at <a href="https://nategh.info">www.nategh.info</a>.</p>
+</article>
