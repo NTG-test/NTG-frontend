@@ -2,7 +2,7 @@ var apiUrl = 'https://api.nategh.org';
 var apiLangController = 'language';
 
 var $nwaConfig = {
-	supportedLanguages: ['en-US','fr'],
+	supportedLanguages: ['enUS','fr'],
 	defaultColor: 'nwaColorBlackGold'
 };
 
