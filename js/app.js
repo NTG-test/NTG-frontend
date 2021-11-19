@@ -1,4 +1,4 @@
-var apiUrl = 'https://api.nategh.net';
+var apiUrl = 'https://api.nategh.org';
 var apiLangController = 'language';
 
 var $nwaConfig = {
