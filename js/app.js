@@ -198,23 +198,27 @@ var $nwaScope = {
 				url: apiUrl+'/search',
 				onResponse: function(status,responseText) {
 					responseObject = JSON.parse(responseText);
+					var i = 5;
 					responseObject.forEach(element => {
-						console.log(element.name);
-						console.log(element.period);
+						nwaSelect('main article#suraList section#sura' + j + ' span.suraName').innerHTML = element.name;
+						if (element.period == 'makki')
+							nwaSelect('main article#suraList section#sura' + j + ' span.suraName').innerHTML += "+";
+						else
+							nwaSelect('main article#suraList section#sura' + j + ' span.suraName').innerHTML += "-";
 					});
 
-					var surahList = '';
-					var i;
-					var j;
-					for (i in responseObject) {
-						j = i + 1;
-						console.log('j = '+j);
-						nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML = responseObject[i].name;
-						if (responseObject[i].period == 'makki')
-							nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML += "+";
-						else
-							nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML += "-";
-                	}
+					// var surahList = '';
+					// var i;
+					// var j;
+					// for (i in responseObject) {
+					// 	j = i + 1;
+					// 	console.log('j = '+j);
+					// 	nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML = responseObject[i].name;
+					// 	if (responseObject[i].period == 'makki')
+					// 		nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML += "+";
+					// 	else
+					// 		nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML += "-";
+                	// }
 				}
 			},
 			nwaPageForm: false
