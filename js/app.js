@@ -31,7 +31,7 @@ var $nwaScope = {
             },
             nwaPageData: false,
             nwaPageForm: {
-            	url: apiUrl + '/account',
+            	url: apiUrl + '/nwaAccount',
             	onResponse: function(status,responseText) {
             		nwaPageFetch(false, 'account', 'verify', responseText);
             	}
