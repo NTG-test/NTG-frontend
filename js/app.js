@@ -1,5 +1,4 @@
 var apiUrl = 'https://api.nategh.org';
-var apiLangController = 'language';
 
 var $nwaConfig = {
 	supportedLanguages: ['ar', 'enUS', 'fa'],
