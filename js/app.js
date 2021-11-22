@@ -203,6 +203,7 @@ var $nwaScope = {
                 	responseObject=JSON.parse(responseText);
 					for (i in responseObject) {
 						j = i + 1;
+						console.log('j = '+j);
 						nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML = responseObject[i].name;
 						if (responseObject[i].period == 'makki')
 							nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML += "+";
