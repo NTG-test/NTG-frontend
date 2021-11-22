@@ -198,7 +198,7 @@ var $nwaScope = {
 				url: apiUrl+'/search',
 				onResponse: function(status,responseText) {
 					responseObject = JSON.parse(responseText);
-					var i = 5;
+					var j = 5;
 					responseObject.forEach(element => {
 						nwaSelect('main article#suraList section#sura' + j + ' span.suraName').innerHTML = element.name;
 						if (element.period == 'makki')
