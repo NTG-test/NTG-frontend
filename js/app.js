@@ -198,15 +198,16 @@ var $nwaScope = {
 				url: apiUrl+'/search',
 				onResponse: function(status,responseText) {
 					var surahList = '';
-                	var i=1;
+					var i;
+					var j;
                 	responseObject=JSON.parse(responseText);
 					for (i in responseObject) {
-						console.log('i='+i);
-						nwaSelect('main article#suraList section#sura'+i+' span.suraName').innerHTML = responseObject[i].name;
+						j = i + 1;
+						nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML = responseObject[i].name;
 						if (responseObject[i].period == 'makki')
-							nwaSelect('main article#suraList section#sura'+i+' span.suraName').innerHTML += "+";
+							nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML += "+";
 						else
-							nwaSelect('main article#suraList section#sura'+i+' span.suraName').innerHTML += "-";
+							nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML += "-";
                 	}
 				}
 			},
