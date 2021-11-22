@@ -197,10 +197,12 @@ var $nwaScope = {
 			nwaPageData: {
 				url: apiUrl+'/search',
 				onResponse: function(status,responseText) {
+					responseObject = JSON.parse(responseText);
+					responseObject.forEach(element => console.log(element));
+
 					var surahList = '';
 					var i;
 					var j;
-                	responseObject=JSON.parse(responseText);
 					for (i in responseObject) {
 						j = i + 1;
 						console.log('j = '+j);
