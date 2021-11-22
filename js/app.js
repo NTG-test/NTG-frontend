@@ -200,7 +200,8 @@ var $nwaScope = {
 					var surahList = '';
                 	var i=1;
                 	responseObject=JSON.parse(responseText);
-                	for (i in responseObject) {
+					for (i in responseObject) {
+						console.log('i='+i);
 						nwaSelect('main article#suraList section#sura'+i+' span.suraName').innerHTML = responseObject[i].name;
 						if (responseObject[i].period == 'makki')
 							nwaSelect('main article#suraList section#sura'+i+' span.suraName').innerHTML += "+";
