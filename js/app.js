@@ -198,27 +198,13 @@ var $nwaScope = {
 				url: apiUrl+'/search',
 				onResponse: function(status,responseText) {
 					responseObject = JSON.parse(responseText);
-					var j = 5;
 					responseObject.forEach(element => {
-						nwaSelect('main article#suraList section#sura' + j + ' span.suraName').innerHTML = element.name;
+						nwaSelect('main article#suraList section#sura' + element.id + ' span.suraName').innerHTML = element.name;
 						if (element.period == 'makki')
-							nwaSelect('main article#suraList section#sura' + j + ' span.suraName').innerHTML += "+";
+							nwaSelect('main article#suraList section#sura' + element.id + ' span.suraName').innerHTML += "+";
 						else
-							nwaSelect('main article#suraList section#sura' + j + ' span.suraName').innerHTML += "-";
+							nwaSelect('main article#suraList section#sura' + element.id + ' span.suraName').innerHTML += "-";
 					});
-
-					// var surahList = '';
-					// var i;
-					// var j;
-					// for (i in responseObject) {
-					// 	j = i + 1;
-					// 	console.log('j = '+j);
-					// 	nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML = responseObject[i].name;
-					// 	if (responseObject[i].period == 'makki')
-					// 		nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML += "+";
-					// 	else
-					// 		nwaSelect('main article#suraList section#sura'+j+' span.suraName').innerHTML += "-";
-                	// }
 				}
 			},
 			nwaPageForm: false
